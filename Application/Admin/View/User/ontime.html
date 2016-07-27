@@ -1,0 +1,92 @@
+<extend name="Public/base"/>
+<block name="style">
+<style>
+.time{
+	text-align:center;    
+	border: 0;
+    background-color: #DDD;
+    border-radius: 5px;
+}
+</style>
+</block>
+<block name="content">
+	<!--右侧内容开始-->
+	<div class="chart">
+	    <div class="canvas" >
+	    	<div>
+		        <h3 class="text-primary">在线时长&nbsp;<input size="8" type="text" value="{:date('Y-m-d')}" readonly class="form_datetime time"></h3>
+	    	</div>
+	    	<input type="hidden" id="day">
+	    	<input type="hidden" id="data">
+	        <div id="container" style="min-width: 700px; height: 400px; margin: 0 auto"></div>
+	    </div>
+	</div>
+	<!--右侧内容结束-->
+<script>
+var options;
+	$(function(){
+		var options = {
+				title: {
+			        text: null
+			    },
+			    yAxis: {
+			    	title: {
+			            text: '在线时间 (min)'
+			        }
+			    },
+			    tooltip: {
+			        valueSuffix: 'min'
+			    },
+			    series: null
+			};
+			chart = initCharts('container',options);
+		
+		$(".form_datetime").datetimepicker({
+			format: 'yyyy-mm-dd',
+			minView: 2,
+			todayBtn: true,
+			todayHighlight: true,
+			autoclose: true,
+			endDate: new Date()
+		}).on('changeDate', function(ev){
+			add($(this).val());
+		});
+		
+		add($(".form_datetime").val());
+	});
+	
+	/**
+	 * 添加对比
+	 */
+	function add(day){
+		var days = $("#day").val();
+		
+		if (days.indexOf(day) > -1){
+		} else {
+			$("#day").val(days+','+day);
+			getData(day);
+		}
+	}
+	
+	/**
+	 * 获取数据
+	 */
+	function getData(time){
+		var url = '__SELF__';
+		$.post(url,{day:time},function(json){
+			if (json.status){
+				var options = {
+					xAxis:{
+						name: time,
+						data: json.val
+					},
+					categories: json.key
+				};
+				addSeries(chart, options);
+			}
+		},'json');
+	}
+	
+</script>
+
+</block>

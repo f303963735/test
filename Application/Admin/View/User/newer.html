@@ -1,0 +1,55 @@
+<extend name="Public/base"/>
+<block name="content">
+	<!--右侧内容开始-->
+	<div class="chart">
+	    <div class="canvas" >
+	        <h3 class="text-primary">新增玩家</h3>
+	        <div id="container" style="min-width: 700px; height: 400px; margin: 0 auto"></div>
+	    </div>
+	</div>
+	<!--右侧内容结束-->
+<script>
+
+var chart;
+$(function(){
+	
+	var options = {
+		title: {
+	        text: null
+	    },
+	    yAxis: {
+	    	title: {
+	            text: '注册人数(个)'
+	        }
+	    },
+	    tooltip: {
+	        valueSuffix: '个'
+	    },
+	    series: null
+	};
+	chart = initCharts('container',options);
+	
+	getData();
+});
+
+/**
+ * 获取数据
+ */
+function getData(){
+	var url = '__SELF__';
+	$.post(url, function(json){
+		if (json.status){
+			var options = {
+				xAxis:{
+					name: '注册人数',
+					data: json.val
+				},
+				categories: json.key
+			};
+			addSeries(chart, options);
+		}
+	},'json');
+}
+</script>
+
+</block>

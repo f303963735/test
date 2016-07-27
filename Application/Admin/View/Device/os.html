@@ -1,0 +1,54 @@
+<extend name="Public/base"/>
+<block name="style">
+<style>
+</style>
+</block>
+<block name="content">
+	<!--右侧内容开始-->
+	<div class="canvas" >
+        <h3 class="text-primary">系统信息</h3>
+        <div id="container1" style="min-width: 700px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="canvas" >
+        <h3 class="text-primary">系统版本</h3>
+        <div id="container2" style="min-width: 700px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="canvas" >
+        <h3 class="text-primary">Android版本</h3>
+        <div id="container3" style="min-width: 700px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <div class="canvas" >
+        <h3 class="text-primary">内核版本</h3>
+        <div id="container4" style="min-width: 700px; height: 400px; margin: 0 auto"></div>
+    </div>
+	<!--右侧内容结束-->
+<script>
+var chart;
+$(function(){
+	getData('container1', 'name');
+	getData('container2', 'version');
+	getData('container3', 'and_version');
+	getData('container4', 'linux_version');
+});
+
+/**
+ * 获取数据
+ */
+function getData(id, group){
+	var url = '__SELF__';
+	$.post(url, {group,group}, function(json){
+		if (json.status){
+			var options = {
+				series: [{
+			        name: '占比',
+			        colorByPoint: true,
+			        data: json.data
+			    }]
+			};
+			chart = initCharts(id, options, 'pie');
+		}
+	},'json');
+}
+</script>
+
+</block>

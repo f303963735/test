@@ -1,0 +1,44 @@
+<extend name="Public/base"/>
+<block name="content">
+	<h1 class="text-center text-white">{$sys_title}</h1>
+	
+	<table class="table table-bordered table-striped text-center bg-info">
+	    <thead >
+	    <tr class="info">
+	        <th class="text-center">游戏名称</th>
+	        <th class="text-center">appid</th>
+	        <!-- 
+	        <th class="text-center">设备激活</th>
+	        <th class="text-center">玩家</th>
+	        <th class="text-center">游戏次数</th>
+	        <th class="text-center">收入</th>
+	         -->
+	        <th class="text-center">报表</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    	<notempty name="list">
+	    		<volist name="list" id="v">
+					<tr>
+			            <td>{$v['game_name']}</td>
+			            <td>{$v['game_appid']}</td>
+			            <!-- 
+			            <td>10</td>
+			            <td>10</td>
+			            <td>20</td>
+			            <td>99</td>
+			             -->
+			            <td>
+			                <a href="{:U('User/logincount?appid='.$v['game_appid'])}" class="btn btn-primary btn-sm">
+			                	<i class="glyphicon glyphicon-align-left"></i>
+		                	</a>
+			            </td>
+			        </tr>
+	    		</volist>
+	    	</notempty>
+		</tbody>
+	</table>
+	<div class="page">
+ 	  	{$_page|default=''}
+  	</div>
+</block>
