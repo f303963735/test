@@ -162,6 +162,7 @@ class BaseController extends Controller{
         $this->assign('sys_title',$this->sysTitle);
         $this->assign('meta_title',$this->metaTitle);
         $this->assign('is_index',(CONTROLLER_NAME == 'Index' && ACTION_NAME == 'index'));
+        $this->assign('url',CONTROLLER_NAME.'/'.ACTION_NAME);
         $this->display($templateFile,$charset,$contentType,$content,$prefix);
     }
     

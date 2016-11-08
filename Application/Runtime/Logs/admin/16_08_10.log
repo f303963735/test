@@ -1,0 +1,142 @@
+[ 2016-08-10T15:31:14+08:00 ] ::1 /data/admin.php?s=/Device/net.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000937s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001468s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001296s ]
+
+[ 2016-08-10T15:31:14+08:00 ] ::1 /data/admin.php?s=/Device/net.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `tab_game_net` [ RunTime:0.0206s ]
+SQL: SELECT `net` FROM `tab_game_net` WHERE `appid` = '54A468CAEB1273B0D' GROUP BY net  [ RunTime:0.0009s ]
+
+[ 2016-08-10T15:31:15+08:00 ] ::1 /data/admin.php?s=/Device/os.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001406s ]
+
+[ 2016-08-10T15:31:15+08:00 ] ::1 /data/admin.php?s=/Device/os.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001382s ]
+SQL: SHOW COLUMNS FROM `tab_game_osinfo` [ RunTime:0.0033s ]
+SQL: SELECT `linux_version` FROM `tab_game_osinfo` WHERE `appid` = '54A468CAEB1273B0D' GROUP BY linux_version  [ RunTime:0.0004s ]
+
+[ 2016-08-10T15:31:15+08:00 ] ::1 /data/admin.php?s=/Device/os.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001817s ]
+SQL: SHOW COLUMNS FROM `tab_game_osinfo` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `tab_game_osinfo` WHERE `appid` = '54A468CAEB1273B0D' GROUP BY name  [ RunTime:0.0006s ]
+
+[ 2016-08-10T15:31:15+08:00 ] ::1 /data/admin.php?s=/Device/os.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001566s ]
+SQL: SHOW COLUMNS FROM `tab_game_osinfo` [ RunTime:0.0023s ]
+SQL: SELECT `and_version` FROM `tab_game_osinfo` WHERE `appid` = '54A468CAEB1273B0D' GROUP BY and_version  [ RunTime:0.0004s ]
+
+[ 2016-08-10T15:31:15+08:00 ] ::1 /data/admin.php?s=/Device/os.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `tab_game_osinfo` [ RunTime:0.0024s ]
+SQL: SELECT `version` FROM `tab_game_osinfo` WHERE `appid` = '54A468CAEB1273B0D' GROUP BY version  [ RunTime:0.0015s ]
+
+[ 2016-08-10T15:31:16+08:00 ] ::1 /data/admin.php?s=/Device/apps.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `tab_game_apps` [ RunTime:0.0041s ]
+NOTIC: [8] Undefined index: p /Applications/MAMP/htdocs/data/Application/Admin/Controller/DeviceController.class.php 第 105 行.
+SQL: SELECT appid,apps_name,apps_size,apps_version,count(apps_name) as count FROM tab_game_apps  WHERE appid='54A468CAEB1273B0D' GROUP BY apps_name [ RunTime:0.0016s ]
+SQL: SELECT appid,apps_name,apps_size,apps_version,count(apps_name) as count FROM tab_game_apps  WHERE appid='54A468CAEB1273B0D' GROUP BY apps_name LIMIT 0 , 10 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2016-08-10T15:31:18+08:00 ] ::1 /data/admin.php?s=/Device/hardware.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+SQL: SHOW COLUMNS FROM `tab_game_device` [ RunTime:0.0018s ]
+NOTIC: [8] Undefined variable: w /Applications/MAMP/htdocs/data/Application/Admin/Controller/DeviceController.class.php 第 24 行.
+NOTIC: [8] Undefined index: p /Applications/MAMP/htdocs/data/Application/Admin/Controller/DeviceController.class.php 第 25 行.
+NOTIC: [8] Undefined index: fields /Applications/MAMP/htdocs/data/Application/Admin/Controller/BaseController.class.php 第 109 行.
+NOTIC: [8] Undefined index: key /Applications/MAMP/htdocs/data/Application/Admin/Controller/BaseController.class.php 第 114 行.
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/data/Application/Admin/Controller/BaseController.class.php 第 114 行.
+SQL: SELECT `id`,`appid`,`uid`,`imei`,`app_version`,`device`,`size`,`available`,`width`,`height` FROM `tab_game_device` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game_device` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001034s ]
+

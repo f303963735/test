@@ -87,10 +87,10 @@
 
                         <div id="collapseOne" class="panel-collapse collapse" >
                             <ul class="nav nav-list menu-second">
-                                <li><a href="<?php echo U('User/newer');?>"><i class="icon-user"></i> 新增玩家</a></li>
-                                <li><a href="<?php echo U('User/logincount');?>"><i class="icon-time"></i> 在线人次</a></li>
-                                <li><a href="<?php echo U('User/ontime');?>"><i class="icon-time"></i> 在线时长</a></li>
-                                <li><a href="<?php echo U('User/recharge');?>"><i class="icon-plus"></i> 充值记录</a></li>
+                                <li><a href="<?php echo U('User/newer');?>" data-url="User/newer"><i class="icon-user"></i> 新增玩家</a></li>
+                                <li><a href="<?php echo U('User/logincount');?>" data-url="User/logincount"><i class="icon-time"></i> 在线人次</a></li>
+                                <li><a href="<?php echo U('User/ontime');?>" data-url="User/ontime"><i class="icon-time"></i> 在线时长</a></li>
+                                <li><a href="<?php echo U('User/recharge');?>" data-url="User/recharge"><i class="icon-plus"></i> 充值记录</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,10 +102,10 @@
 
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <ul class="nav nav-list menu-second">
-                                <li><a href="<?php echo U('Device/hardware');?>"><i class="icon-user"></i> 硬件信息</a></li>
-                                <li><a href="<?php echo U('Device/apps');?>"><i class="icon-mobile-phone"></i> 应用信息</a></li>
-                                <li><a href="<?php echo U('Device/os');?>"><i class="icon-info-sign"></i> 系统信息</a></li>
-                                <li><a href="<?php echo U('Device/net');?>"><i class="icon-rss"></i> 网络信息</a></li>
+                                <li><a href="<?php echo U('Device/hardware');?>" data-url="Device/hardware"><i class="icon-user"></i> 硬件信息</a></li>
+                                <li><a href="<?php echo U('Device/apps');?>" data-url="Device/apps"><i class="icon-mobile-phone"></i> 应用信息</a></li>
+                                <li><a href="<?php echo U('Device/os');?>" data-url="Device/os"><i class="icon-info-sign"></i> 系统信息</a></li>
+                                <li><a href="<?php echo U('Device/net');?>" data-url="Device/net"><i class="icon-rss"></i> 网络信息</a></li>
                             </ul>
                         </div>
                     </div>
@@ -184,7 +184,12 @@ $(function(){
             bootlint.showLintReportForCurrentDocument([]);
         };
         s.src = "/data/Public/res/Admin/js/bootlint.js";
-        document.body.appendChild(s)
+        document.body.appendChild(s);
+        
+        // 左侧栏设置
+        var url = '<?php echo ($url); ?>';
+        //var url = '/data/admin.php?s=/Device/apps.html';
+        init_bar(url);
     })();
 </script>
 </body>
