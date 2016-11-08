@@ -11,7 +11,7 @@ use Think\Controller;
 
 class BaseController extends Controller{
     
-    var $sysTitle = 'TMDGAME游戏数据统计系统';
+    var $sysTitle = '我的系统';
     var $pageSize = 10;
     var $metaTitle;
     
